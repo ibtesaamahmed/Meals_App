@@ -12,12 +12,12 @@ class MealItem extends StatelessWidget {
   final Affordability affordability;
 
   MealItem({
-    @required this.id,
-    @required this.title,
-    @required this.imageUrl,
-    @required this.duration,
-    @required this.complexity,
-    @required this.affordability,
+    required this.id,
+    required this.title,
+    required this.imageUrl,
+    required this.duration,
+    required this.complexity,
+    required this.affordability,
   });
 
   void selectMeal(BuildContext ctx) {
@@ -34,13 +34,13 @@ class MealItem extends StatelessWidget {
     switch (complexity) {
       case Complexity.Simple:
         return 'Simple';
-        break;
+      // break;
       case Complexity.Challenging:
         return 'Challenging';
-        break;
+      // break;
       case Complexity.Hard:
         return 'Hard';
-        break;
+      // break;
       default:
         return 'Unknown';
     }
@@ -58,7 +58,7 @@ class MealItem extends StatelessWidget {
           Stack(
             children: <Widget>[
               ClipRRect(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15)),
                 child: Image.network(
